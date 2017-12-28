@@ -13,7 +13,7 @@ class SurveyList extends Component {
     }
 
     renderSurveys() {
-        if(this.props.surveys.length == 0) {
+        if(this.props.surveys.length === 0) {
             return (
                 <div style={{ textAlign: 'center', fontSize: '20px' }}>
                     Looks like you don't have a campaign yet. Start now!
