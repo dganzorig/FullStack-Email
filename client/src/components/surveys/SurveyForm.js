@@ -4,6 +4,7 @@ import { reduxForm, Field } from 'redux-form';
 import { Link } from 'react-router-dom';
 import SurveyField from './SurveyField';
 import validateEmails from '../../utils/validateEmails';
+import validateEmail from '../../utils/validateEmail';
 import formFields from './formFields';
 
 class SurveyForm extends Component {
@@ -37,6 +38,7 @@ function validate(values) {
     const errors = {};
 
     errors.recipients = validateEmails(values.recipients || '');
+    errors.sender = validateEmail(values.sender || '');
     
     _.each(formFields, ({ name }) => {
         if(!values[name]) { //figure out property at runtime
