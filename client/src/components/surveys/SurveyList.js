@@ -22,17 +22,17 @@ class SurveyList extends Component {
         }
         return this.props.surveys.reverse().map(survey => {
             return(
-                <div className="card blue-grey darken-1" key={survey._id}>
+                <div className="card brown lighten-5" key={survey._id}>
                     <button 
-                        className="waves-effect waves-light btn-large red right"
+                        className="btn waves-effect waves-light red right"
                         onClick={this.onDeleteClick.bind(this, survey._id)}
                     >
                         <i className="material-icons">close</i>
                     </button>
-                    <div className="card-content white-text">
+                    <div className="card-content">
                         <span className="card-title">{survey.title}</span>
                         <p>{survey.body}</p>
-                        <p className="right">
+                        <p className="right" style={{ color: '#757575'}}>
                             Sent On: {new Date(survey.dateSent).toLocaleDateString()}
                         </p>
                     </div>

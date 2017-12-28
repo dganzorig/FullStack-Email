@@ -24,7 +24,7 @@ class Header extends Component {
 
     render() {
         return(
-            <nav style={{ marginBottom: '35px', paddingLeft: '20px' }}>
+            <nav className="amber accent-4" style={{ marginBottom: '35px', paddingLeft: '20px' }}>
                 <div className="nav-wrapper">
                     <Link to={this.props.auth ? '/surveys' : '/'} className="left brand-logo">
                         Emaily
