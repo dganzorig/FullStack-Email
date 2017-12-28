@@ -13,6 +13,13 @@ class SurveyList extends Component {
     }
 
     renderSurveys() {
+        if(this.props.surveys.length == 0) {
+            return (
+                <div style={{ textAlign: 'center', fontSize: '20px' }}>
+                    Looks like you don't have a campaign yet. Start now!
+                </div>
+            );
+        }
         return this.props.surveys.reverse().map(survey => {
             return(
                 <div className="card blue-grey darken-1" key={survey._id}>
